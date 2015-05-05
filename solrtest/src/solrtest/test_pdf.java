@@ -39,8 +39,6 @@ public class test_pdf {
 		try {
 			String contentT = Files.probeContentType(path); 
 			System.out.println(contentT);
-			String contentType = "application/pdf";
-			System.out.println(contentType);
 			indexFilesSolrCell(filename, solrId,contentT);
 		} catch (IOException e) {
 			// TODO: handle exception
