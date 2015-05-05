@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solrj-lib/commons-io-2.3.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solrj-lib/httpclient-4.3.1.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solrj-lib/httpcore-4.3.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solrj-lib/httpmime-4.3.1.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solrj-lib/noggit-0.5.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solrj-lib/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solrj-lib/wstx-asl-3.2.7.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solrj-lib/zookeeper-3.4.6.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-analysis-extras-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-cell-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-clustering-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-core-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-dataimporthandler-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-dataimporthandler-extras-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-langid-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-map-reduce-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-morphlines-cell-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-morphlines-core-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-solrj-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-test-framework-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-uima-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/dist/solr-velocity-4.10.2.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/example/lib/ext/slf4j-log4j12-1.7.6.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/example/lib/ext/jcl-over-slf4j-1.7.6.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/example/lib/ext/jul-to-slf4j-1.7.6.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/example/lib/ext/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/opt/solr-4.10.2/example/lib/ext/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
