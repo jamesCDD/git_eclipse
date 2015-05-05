@@ -1,4 +1,7 @@
 # git_eclipse
+
+---
+
 first time to use git with eclipse
 实现:
   能够对目录递归,实现pdf等富文本的检索
