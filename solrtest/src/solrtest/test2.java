@@ -1,8 +1,10 @@
 package solrtest;
 
 import java.net.MalformedURLException;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+
 import org.apache.solr.client.solrj.SolrQuery; 
 import org.apache.solr.client.solrj.SolrServer;   
 import org.apache.solr.client.solrj.SolrServerException;   
@@ -30,31 +32,33 @@ public class test2 {
         SolrServer solrServer = getSolrServer();   
         // 查询对象   
         SolrQuery query = new SolrQuery(key);         
-       
         query.setQuery(key);    
              
         try {      
                
             query.setHighlight(true)   
                 //设置开头   
-                .setHighlightSimplePre("<font color=\"red\">")   
+               .setHighlightSimplePre("<font color=\"red\">")   
                 .setHighlightSimplePost("</font>") //设置结尾   
                 .setStart(0)    
                 .setRows(1000);//设置行数   
             
             //设置高亮的哪些区域   
-            query.setParam("hl.fl", "content");   
+           query.setParam("hl.fl", "text");   
             QueryResponse response=solrServer.query(query);;   
             SolrDocumentList list=response.getResults();   
                
             System.out.println("高亮显示：");   
-            for(SolrDocument sd:list){   
+           for(SolrDocument sd:list){   
                 String id=(String) sd.getFieldValue("id");   
-                if(response.getHighlighting().get(id)!=null){   
-                    System.out.println(response.getHighlighting()   
-                        .get(id).get("content"));   
+                System.out.println(id);
+               if(response.getHighlighting().get(id)!=null){   
+            	   System.out.println("高亮的内容");
+//                    System.out.println(response.getHighlighting()   
+//                        .get(id).get("text"));   
+                    System.out.println(response.getHighlighting().get(id).get("text").toString().replaceAll("\\s* ",""));   
        
-                }   
+               }   
             }   
                
             System.out.println("——————————————-");   
@@ -68,13 +72,15 @@ public class test2 {
             for (SolrDocument doc : docs) {                     
                 // 获取查询返回结果   
                 String id = doc.getFieldValue("id").toString();     
-                String title = doc.getFirstValue("title").toString();     
-                String content = doc.getFirstValue("content").toString();   
+                String title = doc.getFirstValue("last_modified").toString();     
+                String content = doc.getFieldValue("text").toString().replaceAll("\\s* ","");
+
+
                    
                 // 打印查询结果   
                 System.out.println("编号："+id);     
                 System.out.println("标题："+title);    
-                System.out.println("内容: "+content);    
+//                System.out.println("内容: "+content);    
            
                 System.out.println("—————————————-");   
                    
@@ -87,11 +93,10 @@ public class test2 {
        
 	
 	public static void main(String[] args)  throws MalformedURLException {
-		//  TODO 测试solr
 		 // 创建一个SolrJSearcheDemo对象   
         test2  sj = new test2();    
         // 查询条件   
-        String Query ="图灵";   
+        String Query ="http";   
         // 调用查询方法   
         sj.search(Query);     
 	}

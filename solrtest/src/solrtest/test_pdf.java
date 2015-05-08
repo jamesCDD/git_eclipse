@@ -53,6 +53,7 @@ public class test_pdf {
 public static void indexFilesSolrCell( String fileName, String solrId,String contentT)  throws IOException, SolrServerException  {
 	String urlString="http://localhost:8080/solr";
 	SolrServer server = new HttpSolrServer(urlString);
+
 	ContentStreamUpdateRequest req = new ContentStreamUpdateRequest("/update/extract");
 	System.out.println(contentT);
 //	String contentType = "application/pdf";

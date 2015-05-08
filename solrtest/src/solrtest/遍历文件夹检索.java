@@ -17,6 +17,7 @@ import org.apache.solr.client.solrj.request.ContentStreamUpdateRequest;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.util.NamedList;
 
+
 /**
 判断文件类型使用了probeContentTpye;也可以使用jMimeMagic开源类
 http://sourceforge.net/projects/jmimemagic/
